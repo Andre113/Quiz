@@ -8,8 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    NSArray *perguntas;
+    NSArray *respostas;
+    int contP, contR;
+}
 
+@property NSArray *perguntas;
+@property NSArray *respostas;
+@property int contP;
+@property (weak, nonatomic) IBOutlet UILabel *pergunta;
+@property (weak, nonatomic) IBOutlet UILabel *resposta;
+
+- (IBAction)setMostrarPergunta:(id)sender;
+
+- (IBAction)setMostrarResposta:(id)sender;
 
 @end
 
